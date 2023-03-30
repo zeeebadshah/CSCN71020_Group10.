@@ -1,6 +1,6 @@
-#include <stdio.h>
+	#include <stdio.h>
 #include <stdbool.h>
-
+#include <math.h>
 #include "main.h"
 #include "triangleSolver.h"
 
@@ -12,16 +12,20 @@ int main() {
 		printWelcome();
 
 		int shapeChoice = printShapeMenu();
-
+		
 		switch (shapeChoice)
 		{
 		case 1:
 			printf_s("Triangle selected.\n");
 			int triangleSides[3] = { 0, 0, 0 };
 			int* triangleSidesPtr = getTriangleSides(triangleSides);
+			
 			//printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
+
+		
+
 			break;
 		case 0:
 			continueProgram = false;
@@ -62,3 +66,6 @@ int* getTriangleSides(int* triangleSides) {
 	}
 	return triangleSides;
 }
+
+
+
