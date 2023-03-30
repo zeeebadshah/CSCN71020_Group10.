@@ -65,3 +65,6 @@ void getInsideAngle(double side1, double side2, double side3) {
 
     printf("Angles are : %.2f %.2f %3.2f \n", A, B, C);
 }
+
+
+//testing push
